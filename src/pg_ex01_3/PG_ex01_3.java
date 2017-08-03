@@ -1,5 +1,7 @@
 package pg_ex01_3;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 public class PG_ex01_3 {
@@ -40,6 +42,8 @@ public class PG_ex01_3 {
 				for(String number : wordcount.keySet()){
 					list.add(number);
 				}
+				//降順に出力させる
+				Collections.sort(list,Comparator.reverseOrder());
 				//出現数ごとに出力
 				for (String print : list){
 					//含まれる単語の要素数を算出する変数
